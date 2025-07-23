@@ -32,6 +32,10 @@ jobs:
       - name: Run Playwright tests
         id: test
         run: yarn playwright test --grep "@demo-only"
+        env:
+          BASE_URL: ${{ secrets.BASE_URL }}
+          DEMO_MODE: ${{ secrets.DEMO_MODE }}
+          API_KEY: ${{ secrets.API_KEY }}
 
       - name: Upload report after tests
         uses: actions/upload-artifact@v4
