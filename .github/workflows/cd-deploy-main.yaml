@@ -12,6 +12,6 @@ jobs:
         uses: peter-evans/repository-dispatch@v2
         with:
           token: ${{ secrets.TWENTY_INFRA_TOKEN }}
-          repository: twentyhq/twenty-infra
+          repository: Lehari1/twenty1
           event-type: auto-deploy-main
           client-payload: '{"github": ${{ toJson(github) }}}' # Passes the entire github context to the downstream workflow
